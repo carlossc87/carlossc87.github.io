@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="home">
-  <h1 class="page-heading">Proyectos</h1>
+  <h1 class="page-heading"><a href="{{ '/proyectos/' | prepend: site.baseurl }}">Proyectos</a></h1>
   {% if site.pages.size == 0 %}
     Sin proyectos.
   {% else %}
@@ -19,7 +19,7 @@ layout: default
   {% endfor %}
   </ul>
   {% endif %}
-  <h1 class="page-heading">Artículos</h1>
+  <h1 class="page-heading"><a href="{{ '/articulos/' | prepend: site.baseurl }}">Artículos</a></h1>
   {% if site.posts.size == 0 %}
     Sin artículos.
   {% else %}
