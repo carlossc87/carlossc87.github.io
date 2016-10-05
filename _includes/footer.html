@@ -1,19 +1,12 @@
 <footer class="site-footer">
+
   <div class="wrapper">
+
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="filters-list">
-            <li>
-              <a href="{{ '/proyectos/' | prepend: site.baseurl }}">Proyectos</a>
-            </li>
-            <li>
-              <a href="{{ '/articulos/' | prepend: site.baseurl }}">Artículos</a>
-            </li>
-        </ul>
-        <p class="rss-subscribe">
-          Sigue este sitio <a href="{{ "/feed.xml" | prepend: site.baseurl }}">mediante RSS</a>
-        </p>
+        <p class="rss-subscribe">Sigue este sitio <a href="{{ "/feed.xml" | prepend: site.baseurl }}">vía RSS</a></p>
       </div>
+
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
           {% if site.github_username %}
@@ -34,9 +27,12 @@
           {% endif %}
         </ul>
       </div>
+
       <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
       </div>
     </div>
+
   </div>
+
 </footer>

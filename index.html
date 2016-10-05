@@ -1,38 +1,16 @@
 ---
 layout: default
 ---
+
 <div class="home">
-  <h1 class="page-heading"><a href="{{ '/proyectos/' | prepend: site.baseurl }}">Proyectos</a></h1>
-  {% if site.pages.size == 0 %}
-    Sin proyectos.
-  {% else %}
-  <ul class="post-list">
-  {% for my_page in site.pages %}
-    {% if my_page.menu == 'proyectos' %}
-    <li>
-      <h2>
-        <a class="post-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-      </h2>
-      {{ my_page.description }}
-    </li>
-    {% endif %}
-  {% endfor %}
-  </ul>
-  {% endif %}
-  <h1 class="page-heading"><a href="{{ '/articulos/' | prepend: site.baseurl }}">Artículos</a></h1>
-  {% if site.posts.size == 0 %}
-    Sin artículos.
-  {% else %}
-  <ul class="post-list">
     {% for post in site.posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-      {{ post.excerpt }}
-    </li>
+      <div>
+        <div>
+          <h1>
+            <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h1>
+          <div>{{ post.excerpt }}</div>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
-  {% endif %}
 </div>
