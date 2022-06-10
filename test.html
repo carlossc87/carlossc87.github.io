@@ -19,6 +19,17 @@ function generar(){
 	enlace.appendChild(enlaceTexto);
 	enlaceContenedor.appendChild(enlace);
 	document.getElementById("contenedor").appendChild(enlaceContenedor);
+    
+    var enlaceContenedor2 = document.createElement("div");
+	var enlace2 = document.createElement("form");
+	enlace2.setAttribute("action",url);
+	enlace2.setAttribute("method", "POST");
+    var boton = document.createElement("input");
+    boton.setAttribute("type","submit");
+    boton.setAttribute("value",url);
+	enlace2.appendChild(boton);
+	enlaceContenedor2.appendChild(enlace2);
+    document.getElementById("contenedor").appendChild(enlaceContenedor2);
 }
 </script>
 </body>
