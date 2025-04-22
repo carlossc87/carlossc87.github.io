@@ -9,7 +9,7 @@
       
       form.setAttribute("method", "POST");
       form.setAttribute("action", params.get("url"));
-      for (const [key, value] of searchParams.entries()) {
+      for (const [key, value] of params.entries()) {
         if( key !== 'url'  ){
           var hiddenField = document.createElement("input");
           hiddenField.setAttribute("type", "hidden");
