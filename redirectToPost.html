@@ -4,10 +4,25 @@
   <body>
     <script>
       let params = new URLSearchParams(document.location.search);
-      fetch(params.get("url"), {
-        method: "POST",
-        body: params.entries()
-      });
+
+      var form = document.createElement("form");
+      
+      form.setAttribute("method", "POST");
+      form.setAttribute("action", params.get("url"));
+      for (const [key, value] of searchParams.entries()) {
+        if( key !== 'url'  ){
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", key);
+          hiddenField.setAttribute("value", value);
+  
+          form.appendChild(hiddenField);
+        }
+      }
+  
+      document.body.appendChild(form);
+      form.submit();
+      
     </script>
   </body>
 </html>
