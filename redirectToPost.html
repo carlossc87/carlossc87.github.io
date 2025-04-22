@@ -1,0 +1,13 @@
+<html>
+<head>
+</head>
+  <body>
+    <script>
+      let params = new URLSearchParams(document.location.search);
+      fetch(params.get("url"), {
+        method: "POST",
+        body: params.entries()
+      });
+    </script>
+  </body>
+</html>
